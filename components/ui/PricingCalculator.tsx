@@ -90,7 +90,7 @@ const PricingCalculator: React.FC = () => {
         <div className="space-y-8">
           {/* Team Size */}
           <div>
-            <label className="block text-sm font-semibold text-gray-900 mb-4 flex items-center gap-2">
+            <label className="text-sm font-semibold text-gray-900 mb-4 flex items-center gap-2">
               <Users className="w-4 h-4" />
               Team Size: {config.users} users
             </label>
@@ -111,7 +111,7 @@ const PricingCalculator: React.FC = () => {
 
           {/* Campaigns */}
           <div>
-            <label className="block text-sm font-semibold text-gray-900 mb-4 flex items-center gap-2">
+            <label className="text-sm font-semibold text-gray-900 mb-4 flex items-center gap-2">
               <TrendingUp className="w-4 h-4" />
               Monthly Campaigns: {config.campaigns}
             </label>
@@ -132,7 +132,7 @@ const PricingCalculator: React.FC = () => {
 
           {/* Features */}
           <div>
-            <label className="block text-sm font-semibold text-gray-900 mb-4 flex items-center gap-2">
+            <label className="text-sm font-semibold text-gray-900 mb-4 flex items-center gap-2">
               <Zap className="w-4 h-4" />
               Additional Features
             </label>

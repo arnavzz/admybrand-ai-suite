@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Star, Quote, TrendingUp, Users } from 'lucide-react'
 import Carousel from '@/components/ui/Carousel'
@@ -140,8 +141,26 @@ const TestimonialsSection: React.FC = () => {
 
       {/* Author */}
       <div className="flex items-center gap-4">
-        <div className="w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center">
-          <span className="text-sm font-semibold text-gray-600">
+        <div className="relative w-14 h-14 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
+          <Image
+            src={testimonial.avatar}
+            alt={`${testimonial.name} - ${testimonial.role} at ${testimonial.company}`}
+            width={56}
+            height={56}
+            className="object-cover"
+            onError={(e) => {
+              // Fallback to initials if image fails to load
+              const target = e.target as HTMLImageElement;
+              target.style.display = 'none';
+              if (target.nextElementSibling) {
+                (target.nextElementSibling as HTMLElement).style.display = 'flex';
+              }
+            }}
+          />
+          <span 
+            className="absolute inset-0 text-sm font-semibold text-gray-600 flex items-center justify-center"
+            style={{ display: 'none' }}
+          >
             {testimonial.name.split(' ').map(n => n[0]).join('')}
           </span>
         </div>
