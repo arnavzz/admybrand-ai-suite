@@ -1,4 +1,6 @@
-# ADmyBRAND AI Suite Landing Page
+# ADmyBRAND AI Suite Landing Page 
+Live: https://admy-brand.netlify.app/
+
 
 A modern, high-conversion landing page for the ADmyBRAND AI Suite - an advanced AI-powered marketing tool. Built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion.
 
